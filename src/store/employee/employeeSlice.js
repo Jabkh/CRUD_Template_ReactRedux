@@ -25,7 +25,7 @@ export const updateEmployee = createAsyncThunk('employees/updateEmployee', async
 });
 
 export const deleteEmployee = createAsyncThunk('employees/deleteEmployee', async (id) => {
-  await axios.delete(baseURL+`/api/employees/${id}`,{headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}});
+  await axios.delete(baseURL+`/employees/${id}`,{headers: {'Authorization': `Bearer ${localStorage.getItem('token')}`}});
   return id;
 });
 

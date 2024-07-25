@@ -14,7 +14,7 @@ const Register = () => {
 
     const handleRegister = async (e) => {
         e.preventDefault();
-        await dispatch(register({ name, email, password, roles: [{ name: 'ROLE_USER' }], isEnabled: true }));
+        await dispatch(register({ name, email, password, roles: [{ name: 'ROLE_ADMIN' }], isEnabled: true }));
         navigate('/employees');
     };
 
